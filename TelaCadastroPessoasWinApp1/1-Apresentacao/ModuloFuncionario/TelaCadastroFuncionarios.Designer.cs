@@ -33,14 +33,14 @@
             this.lb_Cpf = new System.Windows.Forms.Label();
             this.lb_Salario = new System.Windows.Forms.Label();
             this.lb_DataNascimento = new System.Windows.Forms.Label();
-            this.maskedTextBox_Data = new System.Windows.Forms.MaskedTextBox();
             this.btn_Gravar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.txt_Nome = new System.Windows.Forms.TextBox();
-            this.cbx_Cargo = new System.Windows.Forms.ComboBox();
             this.maskedTextBox_Cpf = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.numericUpDown_Salario = new System.Windows.Forms.NumericUpDown();
+            this.txt_cargo = new System.Windows.Forms.TextBox();
+            this.dateTimePicker_Data_Nascimento = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Salario)).BeginInit();
             this.SuspendLayout();
@@ -95,15 +95,6 @@
             this.lb_DataNascimento.TabIndex = 4;
             this.lb_DataNascimento.Text = "Data de Nascimento:";
             // 
-            // maskedTextBox_Data
-            // 
-            this.maskedTextBox_Data.Location = new System.Drawing.Point(170, 142);
-            this.maskedTextBox_Data.Mask = "00/00/0000";
-            this.maskedTextBox_Data.Name = "maskedTextBox_Data";
-            this.maskedTextBox_Data.Size = new System.Drawing.Size(183, 23);
-            this.maskedTextBox_Data.TabIndex = 7;
-            this.maskedTextBox_Data.ValidatingType = typeof(System.DateTime);
-            // 
             // btn_Gravar
             // 
             this.btn_Gravar.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -116,6 +107,7 @@
             this.btn_Gravar.TabIndex = 9;
             this.btn_Gravar.Text = "Gravar";
             this.btn_Gravar.UseVisualStyleBackColor = true;
+            this.btn_Gravar.Click += new System.EventHandler(this.btn_Gravar_Click);
             // 
             // btn_Cancelar
             // 
@@ -134,14 +126,6 @@
             this.txt_Nome.Name = "txt_Nome";
             this.txt_Nome.Size = new System.Drawing.Size(185, 23);
             this.txt_Nome.TabIndex = 11;
-            // 
-            // cbx_Cargo
-            // 
-            this.cbx_Cargo.FormattingEnabled = true;
-            this.cbx_Cargo.Location = new System.Drawing.Point(170, 57);
-            this.cbx_Cargo.Name = "cbx_Cargo";
-            this.cbx_Cargo.Size = new System.Drawing.Size(183, 23);
-            this.cbx_Cargo.TabIndex = 12;
             // 
             // maskedTextBox_Cpf
             // 
@@ -168,18 +152,34 @@
             this.numericUpDown_Salario.Size = new System.Drawing.Size(183, 23);
             this.numericUpDown_Salario.TabIndex = 17;
             // 
+            // txt_cargo
+            // 
+            this.txt_cargo.Location = new System.Drawing.Point(169, 57);
+            this.txt_cargo.Name = "txt_cargo";
+            this.txt_cargo.Size = new System.Drawing.Size(186, 23);
+            this.txt_cargo.TabIndex = 18;
+            // 
+            // dateTimePicker_Data_Nascimento
+            // 
+            this.dateTimePicker_Data_Nascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_Data_Nascimento.Location = new System.Drawing.Point(170, 144);
+            this.dateTimePicker_Data_Nascimento.Name = "dateTimePicker_Data_Nascimento";
+            this.dateTimePicker_Data_Nascimento.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dateTimePicker_Data_Nascimento.Size = new System.Drawing.Size(185, 23);
+            this.dateTimePicker_Data_Nascimento.TabIndex = 19;
+            // 
             // TelaCadastroFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(397, 262);
+            this.Controls.Add(this.dateTimePicker_Data_Nascimento);
+            this.Controls.Add(this.txt_cargo);
             this.Controls.Add(this.numericUpDown_Salario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.maskedTextBox_Cpf);
-            this.Controls.Add(this.cbx_Cargo);
             this.Controls.Add(this.txt_Nome);
-            this.Controls.Add(this.maskedTextBox_Data);
             this.Controls.Add(this.lb_DataNascimento);
             this.Controls.Add(this.lb_Salario);
             this.Controls.Add(this.lb_Cpf);
@@ -206,13 +206,13 @@
         private System.Windows.Forms.Label lb_Cpf;
         private System.Windows.Forms.Label lb_Salario;
         private System.Windows.Forms.Label lb_DataNascimento;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox_Data;
         private System.Windows.Forms.Button btn_Gravar;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.TextBox txt_Nome;
-        private System.Windows.Forms.ComboBox cbx_Cargo;
         private System.Windows.Forms.MaskedTextBox maskedTextBox_Cpf;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.NumericUpDown numericUpDown_Salario;
+        private System.Windows.Forms.TextBox txt_cargo;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_Data_Nascimento;
     }
 }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delivery.WinApp1", "TelaCadastroPessoasWinApp1\Delivery.WinApp1.csproj", "{3984F78B-01E0-491A-81D4-29BAD375FDD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delivery.WinApp1", "TelaCadastroPessoasWinApp1\Delivery.WinApp1.csproj", "{3984F78B-01E0-491A-81D4-29BAD375FDD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

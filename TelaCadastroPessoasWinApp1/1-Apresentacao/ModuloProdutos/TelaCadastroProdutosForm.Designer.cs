@@ -35,13 +35,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown_Quantidade = new System.Windows.Forms.NumericUpDown();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox_Bebida = new System.Windows.Forms.CheckBox();
-            this.checkBox_Lanches = new System.Windows.Forms.CheckBox();
+            this.txt_Nome = new System.Windows.Forms.TextBox();
+            this.cbx_Tipo = new System.Windows.Forms.ComboBox();
+            this.txt_Preco = new System.Windows.Forms.TextBox();
+            this.txt_Qtd = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Quantidade)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,6 +73,7 @@
             this.btn_Gravar.TabIndex = 10;
             this.btn_Gravar.Text = "Gravar";
             this.btn_Gravar.UseVisualStyleBackColor = true;
+            this.btn_Gravar.Click += new System.EventHandler(this.btn_Gravar_Click);
             // 
             // label1
             // 
@@ -116,49 +115,34 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "Quantidade:";
             // 
-            // numericUpDown_Quantidade
+            // txt_Nome
             // 
-            this.numericUpDown_Quantidade.Location = new System.Drawing.Point(180, 113);
-            this.numericUpDown_Quantidade.Name = "numericUpDown_Quantidade";
-            this.numericUpDown_Quantidade.Size = new System.Drawing.Size(171, 23);
-            this.numericUpDown_Quantidade.TabIndex = 24;
+            this.txt_Nome.Location = new System.Drawing.Point(180, 35);
+            this.txt_Nome.Name = "txt_Nome";
+            this.txt_Nome.Size = new System.Drawing.Size(171, 23);
+            this.txt_Nome.TabIndex = 26;
             // 
-            // maskedTextBox1
+            // cbx_Tipo
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(180, 73);
-            this.maskedTextBox1.Mask = "0000,00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(171, 23);
-            this.maskedTextBox1.TabIndex = 25;
+            this.cbx_Tipo.FormattingEnabled = true;
+            this.cbx_Tipo.Location = new System.Drawing.Point(180, 149);
+            this.cbx_Tipo.Name = "cbx_Tipo";
+            this.cbx_Tipo.Size = new System.Drawing.Size(171, 23);
+            this.cbx_Tipo.TabIndex = 27;
             // 
-            // textBox1
+            // txt_Preco
             // 
-            this.textBox1.Location = new System.Drawing.Point(180, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 23);
-            this.textBox1.TabIndex = 26;
+            this.txt_Preco.Location = new System.Drawing.Point(180, 73);
+            this.txt_Preco.Name = "txt_Preco";
+            this.txt_Preco.Size = new System.Drawing.Size(171, 23);
+            this.txt_Preco.TabIndex = 28;
             // 
-            // checkBox_Bebida
+            // txt_Qtd
             // 
-            this.checkBox_Bebida.AutoSize = true;
-            this.checkBox_Bebida.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox_Bebida.Location = new System.Drawing.Point(180, 155);
-            this.checkBox_Bebida.Name = "checkBox_Bebida";
-            this.checkBox_Bebida.Size = new System.Drawing.Size(76, 25);
-            this.checkBox_Bebida.TabIndex = 27;
-            this.checkBox_Bebida.Text = "Bebida";
-            this.checkBox_Bebida.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_Lanches
-            // 
-            this.checkBox_Lanches.AutoSize = true;
-            this.checkBox_Lanches.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox_Lanches.Location = new System.Drawing.Point(269, 155);
-            this.checkBox_Lanches.Name = "checkBox_Lanches";
-            this.checkBox_Lanches.Size = new System.Drawing.Size(78, 25);
-            this.checkBox_Lanches.TabIndex = 28;
-            this.checkBox_Lanches.Text = "Lanche";
-            this.checkBox_Lanches.UseVisualStyleBackColor = true;
+            this.txt_Qtd.Location = new System.Drawing.Point(180, 113);
+            this.txt_Qtd.Name = "txt_Qtd";
+            this.txt_Qtd.Size = new System.Drawing.Size(171, 23);
+            this.txt_Qtd.TabIndex = 29;
             // 
             // TelaCadastroProdutosForm
             // 
@@ -166,11 +150,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(397, 354);
-            this.Controls.Add(this.checkBox_Lanches);
-            this.Controls.Add(this.checkBox_Bebida);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.numericUpDown_Quantidade);
+            this.Controls.Add(this.txt_Qtd);
+            this.Controls.Add(this.txt_Preco);
+            this.Controls.Add(this.cbx_Tipo);
+            this.Controls.Add(this.txt_Nome);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -183,7 +166,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Produtos";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Quantidade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,10 +180,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Quantidade;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox_Bebida;
-        private System.Windows.Forms.CheckBox checkBox_Lanches;
+        private System.Windows.Forms.TextBox txt_Nome;
+        private System.Windows.Forms.ComboBox cbx_Tipo;
+        private System.Windows.Forms.TextBox txt_Preco;
+        private System.Windows.Forms.TextBox txt_Qtd;
     }
 }

@@ -106,6 +106,7 @@
             this.btn_Gravar.TabIndex = 8;
             this.btn_Gravar.Text = "Gravar";
             this.btn_Gravar.UseVisualStyleBackColor = true;
+            this.btn_Gravar.Click += new System.EventHandler(this.btn_Gravar_Click);
             // 
             // btn_Cancelar
             // 
