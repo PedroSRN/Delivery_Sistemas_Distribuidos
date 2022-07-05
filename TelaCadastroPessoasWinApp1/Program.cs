@@ -1,4 +1,3 @@
-using Delivery.WinApp1;
 using Delivery.WinApp1._1_Apresentacao.ModuloFuncionario;
 using System;
 using System.Collections.Generic;
@@ -6,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TelaCadastroPessoasWinApp1
+namespace Delivery.WinApp1
 {
     internal static class Program
     {

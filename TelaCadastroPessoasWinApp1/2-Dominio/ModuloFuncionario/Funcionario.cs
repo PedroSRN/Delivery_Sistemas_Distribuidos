@@ -30,11 +30,32 @@ namespace Delivery.WinApp1._2_Dominio.ModuloFuncionario
 
         public override void Atualizar(Funcionario funcionario)
         {
-           Nome = funcionario.Nome;
-           Cargo = funcionario.Cargo;
-           Cpf = funcionario.Cpf;
-           Salario = funcionario.Salario;
-           DataNascimento = funcionario.DataNascimento;
+            Nome = funcionario.Nome;
+            Cargo = funcionario.Cargo;
+            Cpf = funcionario.Cpf;
+            Salario = funcionario.Salario;
+            DataNascimento = funcionario.DataNascimento;
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is Funcionario funcionario &&
+                   Id == funcionario.Id &&
+                   Nome == funcionario.Nome &&
+                   Cargo == funcionario.Cargo &&
+                   Cpf == funcionario.Cpf &&
+                   Salario == funcionario.Salario &&
+                   DataNascimento == funcionario.DataNascimento;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id, Nome, Cargo, Cpf, Salario, DataNascimento);
+        }
+
+        public override string ToString()
+        {
+            return Nome.ToString();
         }
     }
 }

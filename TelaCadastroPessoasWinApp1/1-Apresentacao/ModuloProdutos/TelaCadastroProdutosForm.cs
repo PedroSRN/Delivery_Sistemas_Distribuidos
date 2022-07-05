@@ -19,8 +19,13 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloProdutos
         public TelaCadastroProdutosForm()
         {
             InitializeComponent();
+            CarregarTipo();
         }
-
+        private void CarregarTipo()
+        {
+            cbx_Tipo.Items.Add("LANCHE");
+            cbx_Tipo.Items.Add("BEBIDA");
+        }
         public Func<Produtos, ValidationResult> GravarRegistro { get; set; }
         
         public Produtos Produtos 
@@ -37,8 +42,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloProdutos
                 txt_Qtd.Text = produtos.Quantiade.ToString();
                 
                 cbx_Tipo.SelectedItem = produtos.TipoDoProdutor;               
-                    cbx_Tipo.Items.Add("LANCHE");
-                    cbx_Tipo.Items.Add("BEBIDA");
+                   
 
             }
         }
@@ -49,6 +53,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloProdutos
             produtos.Preco = Convert.ToDouble(txt_Preco.Text);
             produtos.Quantiade = Convert.ToInt32(txt_Qtd.Text);
             produtos.TipoDoProdutor = cbx_Tipo.Text;
+           
 
             var resultadoValidacao = GravarRegistro(Produtos);
 

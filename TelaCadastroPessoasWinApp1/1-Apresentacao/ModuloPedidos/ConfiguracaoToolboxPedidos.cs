@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Delivery.WinApp1._1_Apresentacao.ModuloPedidos
 {
-    public class ConfiguracaoToolboxFuncionario : ConfiguracaoToolboxBase
+    public class ConfiguracaoToolboxPedidos : ConfiguracaoToolboxBase
     {
         public override string TiposCadastro => "Lista de Pedidos";
 

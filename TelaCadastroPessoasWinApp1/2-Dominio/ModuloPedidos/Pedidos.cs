@@ -12,13 +12,15 @@ namespace Delivery.WinApp1._2_Dominio.ModuloPedidos
 {
     public class Pedidos : EntidadeBase<Pedidos>
     {
-        public Pedidos(Clientes cliente, Produtos produtos, Funcionario funcionario, string obsetvacao):this()
+        public Pedidos(Clientes cliente, Produtos produtos, Funcionario funcionario, string observacao):this()
         {
             Cliente = cliente;
             Produtos = produtos;
             Funcionario = funcionario;
-            Observacao = obsetvacao;
+            Observacao = observacao;
+      
         }
+
         public Pedidos()
         {
 
@@ -37,6 +39,32 @@ namespace Delivery.WinApp1._2_Dominio.ModuloPedidos
             Funcionario = pedido.Funcionario;
             Observacao = pedido.Observacao;
         }
+
+       
+        public void ConfigurarCliente(Clientes cliente)
+        {
+            if (cliente == null)
+                return;
+            Cliente = cliente;
+        }
+
+        public void ConfigurarProduto(Produtos produto)
+        {
+            if (produto == null)
+                return;
+            Produtos = produto;
+        }
+
+        public void ConfigurarFuncionario(Funcionario funcionario)
+        {
+            if (funcionario == null)
+                return;
+            Funcionario = funcionario;
+        }
+
+        public override string ToString()
+        {
+            return Cliente.Nome;
+        }
     }
-   
 }

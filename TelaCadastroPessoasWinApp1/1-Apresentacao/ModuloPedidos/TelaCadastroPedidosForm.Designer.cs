@@ -38,14 +38,14 @@
             this.cbx_clientes = new System.Windows.Forms.ComboBox();
             this.cbx_Produtos = new System.Windows.Forms.ComboBox();
             this.cbx_bebidas = new System.Windows.Forms.ComboBox();
-            this.list_Observacao = new System.Windows.Forms.ListBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbx_Funcionarios = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox_Bebida_Nao = new System.Windows.Forms.CheckBox();
             this.checkBox_Bebida_Sim = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbx_EnderecoCliente = new System.Windows.Forms.ComboBox();
+            this.txt_Observacao = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,6 +110,7 @@
             this.btn_Gravar.TabIndex = 10;
             this.btn_Gravar.Text = "Gravar";
             this.btn_Gravar.UseVisualStyleBackColor = true;
+            this.btn_Gravar.Click += new System.EventHandler(this.btn_Gravar_Click);
             // 
             // panel1
             // 
@@ -128,6 +129,7 @@
             this.cbx_clientes.Name = "cbx_clientes";
             this.cbx_clientes.Size = new System.Drawing.Size(187, 23);
             this.cbx_clientes.TabIndex = 19;
+            this.cbx_clientes.Text = "[Selecione]";
             // 
             // cbx_Produtos
             // 
@@ -136,6 +138,7 @@
             this.cbx_Produtos.Name = "cbx_Produtos";
             this.cbx_Produtos.Size = new System.Drawing.Size(187, 23);
             this.cbx_Produtos.TabIndex = 20;
+            this.cbx_Produtos.Text = "[Selecione]";
             // 
             // cbx_bebidas
             // 
@@ -144,23 +147,16 @@
             this.cbx_bebidas.Name = "cbx_bebidas";
             this.cbx_bebidas.Size = new System.Drawing.Size(187, 23);
             this.cbx_bebidas.TabIndex = 21;
+            this.cbx_bebidas.Text = "[Selecione]";
             // 
-            // list_Observacao
+            // cbx_Funcionarios
             // 
-            this.list_Observacao.FormattingEnabled = true;
-            this.list_Observacao.ItemHeight = 15;
-            this.list_Observacao.Location = new System.Drawing.Point(173, 270);
-            this.list_Observacao.Name = "list_Observacao";
-            this.list_Observacao.Size = new System.Drawing.Size(187, 109);
-            this.list_Observacao.TabIndex = 22;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(173, 103);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(187, 23);
-            this.comboBox1.TabIndex = 24;
+            this.cbx_Funcionarios.FormattingEnabled = true;
+            this.cbx_Funcionarios.Location = new System.Drawing.Point(173, 103);
+            this.cbx_Funcionarios.Name = "cbx_Funcionarios";
+            this.cbx_Funcionarios.Size = new System.Drawing.Size(187, 23);
+            this.cbx_Funcionarios.TabIndex = 24;
+            this.cbx_Funcionarios.Text = "[Selecione]";
             // 
             // label5
             // 
@@ -221,6 +217,14 @@
             this.cbx_EnderecoCliente.Name = "cbx_EnderecoCliente";
             this.cbx_EnderecoCliente.Size = new System.Drawing.Size(187, 23);
             this.cbx_EnderecoCliente.TabIndex = 33;
+            this.cbx_EnderecoCliente.Text = "[Selecione]";
+            // 
+            // txt_Observacao
+            // 
+            this.txt_Observacao.Location = new System.Drawing.Point(173, 272);
+            this.txt_Observacao.Name = "txt_Observacao";
+            this.txt_Observacao.Size = new System.Drawing.Size(188, 23);
+            this.txt_Observacao.TabIndex = 34;
             // 
             // TelaCadastroPedidosForm
             // 
@@ -228,14 +232,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(397, 441);
+            this.Controls.Add(this.txt_Observacao);
             this.Controls.Add(this.cbx_EnderecoCliente);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.checkBox_Bebida_Nao);
             this.Controls.Add(this.checkBox_Bebida_Sim);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbx_Funcionarios);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.list_Observacao);
             this.Controls.Add(this.cbx_bebidas);
             this.Controls.Add(this.cbx_Produtos);
             this.Controls.Add(this.cbx_clientes);
@@ -269,13 +273,13 @@
         private System.Windows.Forms.ComboBox cbx_clientes;
         private System.Windows.Forms.ComboBox cbx_Produtos;
         private System.Windows.Forms.ComboBox cbx_bebidas;
-        private System.Windows.Forms.ListBox list_Observacao;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbx_Funcionarios;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox_Bebida_Nao;
         private System.Windows.Forms.CheckBox checkBox_Bebida_Sim;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbx_EnderecoCliente;
+        private System.Windows.Forms.TextBox txt_Observacao;
     }
 }

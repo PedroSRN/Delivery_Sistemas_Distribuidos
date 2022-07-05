@@ -6,6 +6,7 @@ using Delivery.WinApp1._1_Apresentacao.ModuloProdutos;
 using Delivery.WinApp1._2_Dominio.ModuloFuncionario;
 using Delivery.WinApp1._3_Infra.ModuloCliente;
 using Delivery.WinApp1._3_Infra.ModuloFuncionario;
+using Delivery.WinApp1._3_Infra.ModuloPedidos;
 using Delivery.WinApp1._3_Infra.ModuloProdutos;
 using System;
 using System.Collections.Generic;
@@ -153,11 +154,12 @@ namespace Delivery.WinApp1
             RepositorioFuncionario repositorioFuncionario = new RepositorioFuncionario();
             RepositorioCliente repositorioCliente = new RepositorioCliente();
             RepositorioProdutos repositorioProdutos = new RepositorioProdutos();
+            RepositorioPedidos repositorioPedidos = new RepositorioPedidos();
             controladores = new Dictionary<string, ControladorBase>();
 
             controladores.Add("Funcionarios",new ControladorFuncionario(repositorioFuncionario));
             controladores.Add("Clientes", new ControladorCliente(repositorioCliente));
-            controladores.Add("Pedidos", new ControladorPedidos());
+            controladores.Add("Pedidos", new ControladorPedidos(repositorioPedidos, repositorioCliente, repositorioFuncionario, repositorioProdutos));
             controladores.Add("Produtos", new ControladorProdutos(repositorioProdutos));
         }
 

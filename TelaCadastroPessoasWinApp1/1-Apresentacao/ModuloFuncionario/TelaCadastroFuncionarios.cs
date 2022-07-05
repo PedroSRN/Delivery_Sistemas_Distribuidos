@@ -41,7 +41,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloFuncionario
                     dateTimePicker_Data_Nascimento.Value = funcionario.DataNascimento;
                 }
                 else
-                    dateTimePicker_Data_Nascimento.Value = DateTimePicker.MinimumDateTime;
+                    dateTimePicker_Data_Nascimento.Value = DateTime.Now;
             }
         }
 

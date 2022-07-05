@@ -1,4 +1,5 @@
 ﻿using Delivery.WinApp1._2_Dominio.Compartilhado;
+using Delivery.WinApp1._2_Dominio.ModuloFuncionario;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +20,9 @@ namespace Delivery.WinApp1._2_Dominio.ModuloProdutos
 
         public Produtos()
         {
-
+            
         }
+
         public string  Nome {get; set;}
         public double Preco {get; set;}
         public int Quantiade { get; set;}
@@ -32,6 +34,26 @@ namespace Delivery.WinApp1._2_Dominio.ModuloProdutos
             Preco = produtos.Preco;
             Quantiade = produtos.Quantiade;
             TipoDoProdutor = produtos.TipoDoProdutor;
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is Produtos produtos &&
+                   Id == produtos.Id &&
+                   Nome == produtos.Nome &&
+                   Preco == produtos.Preco &&
+                   Quantiade == produtos.Quantiade &&
+                   TipoDoProdutor == produtos.TipoDoProdutor;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id, Nome, Preco, Quantiade, TipoDoProdutor);
+        }
+
+        public override string ToString()
+        {
+            return Nome.ToString();
         }
     }
 }

@@ -20,6 +20,8 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloClientes
             this.repositorioCliente = repositorioCliente;
         }
 
+       
+
         public override void Inserir()
         {
             var tela = new TelaCadastroClienteForm();
@@ -102,7 +104,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloClientes
 
         }
 
-        private void CarregarClientes()
+        public void CarregarClientes()
         {
            List<Clientes> clientes = repositorioCliente.SelecionarTodos();
 
