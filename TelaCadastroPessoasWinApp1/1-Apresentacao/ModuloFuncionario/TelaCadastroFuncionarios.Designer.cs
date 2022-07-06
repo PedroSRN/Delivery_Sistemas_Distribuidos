@@ -38,11 +38,10 @@
             this.txt_Nome = new System.Windows.Forms.TextBox();
             this.maskedTextBox_Cpf = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.numericUpDown_Salario = new System.Windows.Forms.NumericUpDown();
             this.txt_cargo = new System.Windows.Forms.TextBox();
             this.dateTimePicker_Data_Nascimento = new System.Windows.Forms.DateTimePicker();
+            this.txt_salario = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Salario)).BeginInit();
             this.SuspendLayout();
             // 
             // lb_Nome
@@ -130,7 +129,7 @@
             // maskedTextBox_Cpf
             // 
             this.maskedTextBox_Cpf.Location = new System.Drawing.Point(170, 84);
-            this.maskedTextBox_Cpf.Mask = "000.000.000-00";
+            this.maskedTextBox_Cpf.Mask = "000,000,000-00";
             this.maskedTextBox_Cpf.Name = "maskedTextBox_Cpf";
             this.maskedTextBox_Cpf.Size = new System.Drawing.Size(183, 23);
             this.maskedTextBox_Cpf.TabIndex = 15;
@@ -144,13 +143,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(402, 55);
             this.panel1.TabIndex = 16;
-            // 
-            // numericUpDown_Salario
-            // 
-            this.numericUpDown_Salario.Location = new System.Drawing.Point(172, 113);
-            this.numericUpDown_Salario.Name = "numericUpDown_Salario";
-            this.numericUpDown_Salario.Size = new System.Drawing.Size(183, 23);
-            this.numericUpDown_Salario.TabIndex = 17;
             // 
             // txt_cargo
             // 
@@ -168,15 +160,22 @@
             this.dateTimePicker_Data_Nascimento.Size = new System.Drawing.Size(185, 23);
             this.dateTimePicker_Data_Nascimento.TabIndex = 19;
             // 
+            // txt_salario
+            // 
+            this.txt_salario.Location = new System.Drawing.Point(169, 115);
+            this.txt_salario.Name = "txt_salario";
+            this.txt_salario.Size = new System.Drawing.Size(184, 23);
+            this.txt_salario.TabIndex = 20;
+            // 
             // TelaCadastroFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(397, 262);
+            this.Controls.Add(this.txt_salario);
             this.Controls.Add(this.dateTimePicker_Data_Nascimento);
             this.Controls.Add(this.txt_cargo);
-            this.Controls.Add(this.numericUpDown_Salario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.maskedTextBox_Cpf);
             this.Controls.Add(this.txt_Nome);
@@ -193,7 +192,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Funcionarios";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Salario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,8 +209,8 @@
         private System.Windows.Forms.TextBox txt_Nome;
         private System.Windows.Forms.MaskedTextBox maskedTextBox_Cpf;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Salario;
         private System.Windows.Forms.TextBox txt_cargo;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Data_Nascimento;
+        private System.Windows.Forms.TextBox txt_salario;
     }
 }

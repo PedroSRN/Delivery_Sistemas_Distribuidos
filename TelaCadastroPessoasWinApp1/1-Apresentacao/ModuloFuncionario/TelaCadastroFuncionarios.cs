@@ -1,10 +1,12 @@
-﻿using Delivery.WinApp1._2_Dominio.ModuloFuncionario;
+﻿using Delivery.WinApp1._1_Apresentacao.Compartilhado;
+using Delivery.WinApp1._2_Dominio.ModuloFuncionario;
 using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +21,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloFuncionario
         public TelaCadastroFuncionarios()
         {
             InitializeComponent();
+            ClassMaskMoeda.AplicaMascaraMoeda2(txt_salario);
         }
 
         public Func<Funcionario, ValidationResult> GravarRegistro { get; set; }
@@ -34,7 +37,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloFuncionario
                 txt_Nome.Text = funcionario.Nome;
                 txt_cargo.Text = funcionario.Cargo;
                 maskedTextBox_Cpf.Text = funcionario.Cpf;
-                numericUpDown_Salario.Value = funcionario.Salario;
+                txt_salario.Text = funcionario.Salario.ToString();
 
                 if (funcionario.DataNascimento > DateTimePicker.MinimumDateTime)
                 {
@@ -50,7 +53,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloFuncionario
             funcionario.Nome = txt_Nome.Text;
             funcionario.Cargo = txt_cargo.Text;
             funcionario.Cpf = maskedTextBox_Cpf.Text;
-            funcionario.Salario = numericUpDown_Salario.Value;
+            funcionario.Salario = Convert.ToDouble(txt_salario.Text.Replace("R$", string.Empty).Replace(",", CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator));
             funcionario.DataNascimento = dateTimePicker_Data_Nascimento.Value;
 
             var resultadoValidacao = GravarRegistro(Funcionario);

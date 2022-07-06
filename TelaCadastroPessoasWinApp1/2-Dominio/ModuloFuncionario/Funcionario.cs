@@ -9,7 +9,7 @@ namespace Delivery.WinApp1._2_Dominio.ModuloFuncionario
 {
     public class Funcionario : EntidadeBase<Funcionario>
     {
-        public Funcionario(string nome, string cargo, string cpf, decimal salario, DateTime dataNascimento):this()
+        public Funcionario(string nome, string cargo, string cpf, double salario, DateTime dataNascimento):this()
         {
             Nome = nome;
             Cargo = cargo;
@@ -25,7 +25,7 @@ namespace Delivery.WinApp1._2_Dominio.ModuloFuncionario
         public string Nome { get; set; }
         public string Cargo { get; set; }
         public string Cpf { get; set; }
-        public decimal Salario { get; set; }
+        public double Salario { get; set; }
         public DateTime DataNascimento { get; set; }
 
         public override void Atualizar(Funcionario funcionario)

@@ -27,7 +27,7 @@ namespace Delivery.WinApp1._3_Infra.ModuloFuncionario
             var nome = Convert.ToString(leitorFuncionario["NOME"]);
             var cargo = Convert.ToString(leitorFuncionario["CARGO"]);
             var cpf = Convert.ToString(leitorFuncionario["CPF"]);
-            var salario = Convert.ToDecimal(leitorFuncionario["SALARIO"]);
+            var salario = Convert.ToDouble(leitorFuncionario["SALARIO"]);
             var dataNascimento = Convert.ToDateTime(leitorFuncionario["DATANASCIMENTO"]);
 
             Funcionario funcionario = new Funcionario();

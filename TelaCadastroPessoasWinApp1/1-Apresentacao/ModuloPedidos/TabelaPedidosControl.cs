@@ -36,9 +36,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloPedidos
 
                 new DataGridViewTextBoxColumn { DataPropertyName = "Produtos", HeaderText = "Nome do Produto", FillWeight=85F },
 
-                new DataGridViewTextBoxColumn { DataPropertyName = "Produtos", HeaderText = "Nome da Bebida", FillWeight=85F },
-
-                 new DataGridViewTextBoxColumn { DataPropertyName = "Observacao", HeaderText = "Observação do pedido", FillWeight=85F }
+                new DataGridViewTextBoxColumn { DataPropertyName = "Observacao", HeaderText = "Observação do pedido", FillWeight=85F }
 
 
             };
@@ -55,10 +53,11 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloPedidos
         public void AtualizarRegistros(List<Pedidos> pedidos)
         {
             grid.Rows.Clear();
-
+            
             foreach (Pedidos pedido in pedidos)
             {
-                grid.Rows.Add(pedido.Id, pedido.Cliente.Nome, pedido.Cliente.Endereco, pedido.Funcionario.Nome, pedido.Produtos.Nome, pedido.Produtos.Nome, pedido.Observacao);
+                grid.Rows.Add(pedido.Id, pedido.Cliente.Nome, pedido.Cliente.Endereco, pedido.Funcionario.Nome, pedido.Produtos.Nome, pedido.Observacao);
+               
             }
         }
 

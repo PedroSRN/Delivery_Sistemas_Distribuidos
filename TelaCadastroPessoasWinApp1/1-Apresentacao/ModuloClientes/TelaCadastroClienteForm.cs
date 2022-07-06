@@ -32,7 +32,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloClientes
                 cliente = value;
 
                 txt_Nome.Text = cliente.Nome;
-                maskedTextBox_Telefone.Text = cliente.Telefone;
+                masked_Telefone.Text = cliente.Telefone;
                 maskedTextBox_Cpf.Text = cliente.CPF;
                 txt_Endereco.Text = cliente.Endereco;
             }
@@ -42,7 +42,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloClientes
         private void btn_Gravar_Click(object sender, EventArgs e)
         {
             cliente.Nome = txt_Nome.Text;
-            cliente.Telefone = maskedTextBox_Telefone.Text;
+            cliente.Telefone = masked_Telefone.Text;
             cliente.CPF = maskedTextBox_Cpf.Text;
             cliente.Endereco = txt_Endereco.Text;
 

@@ -38,7 +38,7 @@
             this.txt_Nome = new System.Windows.Forms.TextBox();
             this.cbx_Tipo = new System.Windows.Forms.ComboBox();
             this.txt_Preco = new System.Windows.Forms.TextBox();
-            this.txt_Qtd = new System.Windows.Forms.TextBox();
+            this.masked_Qtd = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,6 +124,7 @@
             // 
             // cbx_Tipo
             // 
+            this.cbx_Tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_Tipo.FormattingEnabled = true;
             this.cbx_Tipo.Location = new System.Drawing.Point(180, 149);
             this.cbx_Tipo.Name = "cbx_Tipo";
@@ -137,12 +138,14 @@
             this.txt_Preco.Size = new System.Drawing.Size(171, 23);
             this.txt_Preco.TabIndex = 28;
             // 
-            // txt_Qtd
+            // masked_Qtd
             // 
-            this.txt_Qtd.Location = new System.Drawing.Point(180, 113);
-            this.txt_Qtd.Name = "txt_Qtd";
-            this.txt_Qtd.Size = new System.Drawing.Size(171, 23);
-            this.txt_Qtd.TabIndex = 29;
+            this.masked_Qtd.Location = new System.Drawing.Point(180, 113);
+            this.masked_Qtd.Mask = "00000";
+            this.masked_Qtd.Name = "masked_Qtd";
+            this.masked_Qtd.Size = new System.Drawing.Size(171, 23);
+            this.masked_Qtd.TabIndex = 29;
+            this.masked_Qtd.ValidatingType = typeof(int);
             // 
             // TelaCadastroProdutosForm
             // 
@@ -150,7 +153,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(397, 354);
-            this.Controls.Add(this.txt_Qtd);
+            this.Controls.Add(this.masked_Qtd);
             this.Controls.Add(this.txt_Preco);
             this.Controls.Add(this.cbx_Tipo);
             this.Controls.Add(this.txt_Nome);
@@ -183,6 +186,6 @@
         private System.Windows.Forms.TextBox txt_Nome;
         private System.Windows.Forms.ComboBox cbx_Tipo;
         private System.Windows.Forms.TextBox txt_Preco;
-        private System.Windows.Forms.TextBox txt_Qtd;
+        private System.Windows.Forms.MaskedTextBox masked_Qtd;
     }
 }

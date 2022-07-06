@@ -1,10 +1,12 @@
-﻿using Delivery.WinApp1._2_Dominio.ModuloProdutos;
+﻿using Delivery.WinApp1._1_Apresentacao.Compartilhado;
+using Delivery.WinApp1._2_Dominio.ModuloProdutos;
 using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +22,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloProdutos
         {
             InitializeComponent();
             CarregarTipo();
+            ClassMaskMoeda.AplicaMascaraMoeda2(txt_Preco);
         }
         private void CarregarTipo()
         {
@@ -39,9 +42,9 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloProdutos
 
                 txt_Nome.Text = produtos.Nome;
                 txt_Preco.Text = produtos.Preco.ToString();
-                txt_Qtd.Text = produtos.Quantiade.ToString();
+                masked_Qtd.Text = produtos.Quantiade.ToString();
                 
-                cbx_Tipo.SelectedItem = produtos.TipoDoProdutor;               
+                cbx_Tipo.Text = produtos.TipoDoProdutor;               
                    
 
             }
@@ -50,8 +53,8 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloProdutos
         private void btn_Gravar_Click(object sender, EventArgs e)
         {
             produtos.Nome = txt_Nome.Text;
-            produtos.Preco = Convert.ToDouble(txt_Preco.Text);
-            produtos.Quantiade = Convert.ToInt32(txt_Qtd.Text);
+            produtos.Preco = Convert.ToDouble(txt_Preco.Text.Replace("R$", string.Empty).Replace(",", CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator));
+            produtos.Quantiade = Convert.ToInt32(masked_Qtd.Text);
             produtos.TipoDoProdutor = cbx_Tipo.Text;
            
 

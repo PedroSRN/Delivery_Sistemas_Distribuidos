@@ -30,7 +30,6 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloPedidos
             CarregarEnderecoCliente(clientes);
             CarregarNomeFuncionario(funcionarios);
             CarregarProdutos(produtos);
-            CarregarBebidas(produtos);
         }
 
         private void CarregarNomeCliente(List<Clientes> clientes)
@@ -83,27 +82,8 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloPedidos
             }
         }
 
-        private void CarregarBebidas(List<Produtos> produtos)
-        {
-            // cbx_bebidas.Items.Add(item.TipoDoProdutor.Equals("BEBIDA"));
-
-            foreach (var item in produtos)
-            {
-               
-               // cbx_bebidas.Items.Add(item.TipoDoProdutor.Equals("BEBIDA"));
-                if (item.TipoDoProdutor.Equals("BEBIDA") == true) 
-                {
-                    cbx_bebidas.Items.Add(item);
-                }
-                else if (item.TipoDoProdutor.Equals("BEBIDA") == false)
-                {
-                    cbx_bebidas.Items.Remove(item);
-                }
-
-            }
 
 
-        }
 
 
         public Func<Pedidos, ValidationResult> GravarRegistro { get; internal set; }
@@ -120,21 +100,27 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloPedidos
                 cbx_EnderecoCliente.SelectedItem = Pedidos.Cliente;
                 cbx_Funcionarios.SelectedItem = Pedidos.Funcionario;
                 cbx_Produtos.SelectedItem = Pedidos.Produtos;
-                cbx_bebidas.SelectedItem = Pedidos.Produtos;
+                
                 txt_Observacao.Text = Pedidos.Observacao;
+
+                
             }
         }
 
         private void btn_Gravar_Click(object sender, EventArgs e)
         {
+            
             pedido.Cliente = (Clientes)cbx_clientes.SelectedItem;
             pedido.Cliente = (Clientes)cbx_EnderecoCliente.SelectedItem;
             pedido.Funcionario = (Funcionario)cbx_Funcionarios.SelectedItem;
             pedido.Produtos = (Produtos)cbx_Produtos.SelectedItem;
-            pedido.Produtos = (Produtos)cbx_bebidas.SelectedItem;
             pedido.Observacao = txt_Observacao.Text;
-
             
+            if (txt_Observacao.Text == null )
+            {
+                pedido.Observacao  = "Nao informado";
+            }
+
 
             var resultadoValidacao = GravarRegistro(pedido);
 

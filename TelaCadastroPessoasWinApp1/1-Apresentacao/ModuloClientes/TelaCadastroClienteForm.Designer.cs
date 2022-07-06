@@ -36,9 +36,9 @@
             this.txt_Endereco = new System.Windows.Forms.TextBox();
             this.btn_Gravar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
-            this.maskedTextBox_Telefone = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox_Cpf = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.masked_Telefone = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,21 +119,14 @@
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox_Telefone
-            // 
-            this.maskedTextBox_Telefone.Location = new System.Drawing.Point(116, 68);
-            this.maskedTextBox_Telefone.Mask = "(00)00000-9999";
-            this.maskedTextBox_Telefone.Name = "maskedTextBox_Telefone";
-            this.maskedTextBox_Telefone.Size = new System.Drawing.Size(194, 23);
-            this.maskedTextBox_Telefone.TabIndex = 10;
-            // 
             // maskedTextBox_Cpf
             // 
             this.maskedTextBox_Cpf.Location = new System.Drawing.Point(118, 107);
-            this.maskedTextBox_Cpf.Mask = "000.000.000-00";
+            this.maskedTextBox_Cpf.Mask = "000,000,000-99";
             this.maskedTextBox_Cpf.Name = "maskedTextBox_Cpf";
             this.maskedTextBox_Cpf.Size = new System.Drawing.Size(192, 23);
             this.maskedTextBox_Cpf.TabIndex = 11;
+            this.maskedTextBox_Cpf.ValidatingType = typeof(System.DateTime);
             // 
             // panel1
             // 
@@ -145,15 +138,23 @@
             this.panel1.Size = new System.Drawing.Size(398, 55);
             this.panel1.TabIndex = 17;
             // 
+            // masked_Telefone
+            // 
+            this.masked_Telefone.Location = new System.Drawing.Point(116, 70);
+            this.masked_Telefone.Mask = "0000-9999";
+            this.masked_Telefone.Name = "masked_Telefone";
+            this.masked_Telefone.Size = new System.Drawing.Size(194, 23);
+            this.masked_Telefone.TabIndex = 10;
+            // 
             // TelaCadastroClienteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(397, 262);
+            this.Controls.Add(this.masked_Telefone);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.maskedTextBox_Cpf);
-            this.Controls.Add(this.maskedTextBox_Telefone);
             this.Controls.Add(this.txt_Endereco);
             this.Controls.Add(this.txt_Nome);
             this.Controls.Add(this.lb_Endereco);
@@ -183,8 +184,8 @@
         private System.Windows.Forms.TextBox txt_Endereco;
         private System.Windows.Forms.Button btn_Gravar;
         private System.Windows.Forms.Button btn_Cancelar;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox_Telefone;
         private System.Windows.Forms.MaskedTextBox maskedTextBox_Cpf;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MaskedTextBox masked_Telefone;
     }
 }

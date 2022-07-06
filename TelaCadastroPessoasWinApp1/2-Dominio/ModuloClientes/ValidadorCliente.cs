@@ -15,7 +15,21 @@ namespace Delivery.WinApp1._2_Dominio.ModuloClientes
                .Matches(new Regex(@"^([^0-9]*)$"))
                .NotEmpty()
                .MinimumLength(3);
-                
-	   }
+
+            RuleFor(x => x.Telefone)
+              .NotEmpty()
+              .Matches(new Regex(@"\d{4,5}\-\d{4}"));
+
+            RuleFor(x => x.CPF)
+                .NotEmpty()
+                 .Matches(new Regex(@"[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}"));
+
+            RuleFor(x => x.Endereco)
+               .NotEmpty()
+               .MinimumLength(3);
+
+
+
+        }
     }
 }
