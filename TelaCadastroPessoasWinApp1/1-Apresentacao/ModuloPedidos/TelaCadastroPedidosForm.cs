@@ -19,8 +19,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloPedidos
     public partial class TelaCadastroPedidosForm : Form
     {
         private Pedidos pedido;
-        private readonly ControladorPedidos controladorPedidos;
-        private RepositorioProdutos repositorioProdutos;
+        
 
         public TelaCadastroPedidosForm(List<Clientes> clientes, List<Funcionario> funcionarios, List<Produtos> produtos)
         {
@@ -31,6 +30,9 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloPedidos
             CarregarNomeFuncionario(funcionarios);
             CarregarProdutos(produtos);
         }
+
+        public Func<Pedidos, ValidationResult> GravarRegistro { get; set; }
+
 
         private void CarregarNomeCliente(List<Clientes> clientes)
         {
@@ -71,22 +73,10 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloPedidos
 
             foreach (var item in produtos)
             {
-                if (item.TipoDoProdutor.Equals("LANCHE") == true)
-                {
-                    cbx_Produtos.Items.Add(item);
-                }
-                else if (item.TipoDoProdutor.Equals("LANCHE") == false)
-                {
-                    cbx_Produtos.Items.Remove(item);
-                }
+              cbx_Produtos.Items.Add(item);
+ 
             }
         }
-
-
-
-
-
-        public Func<Pedidos, ValidationResult> GravarRegistro { get; internal set; }
 
         public Pedidos Pedidos 
         {
@@ -97,38 +87,37 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloPedidos
                 pedido = value;
 
                 cbx_clientes.SelectedItem = Pedidos.Cliente;
+ 
                 cbx_EnderecoCliente.SelectedItem = Pedidos.Cliente;
                 cbx_Funcionarios.SelectedItem = Pedidos.Funcionario;
                 cbx_Produtos.SelectedItem = Pedidos.Produtos;
-                
                 txt_Observacao.Text = Pedidos.Observacao;
-
                 
             }
         }
 
         private void btn_Gravar_Click(object sender, EventArgs e)
         {
-            
-            pedido.Cliente = (Clientes)cbx_clientes.SelectedItem;
-            pedido.Cliente = (Clientes)cbx_EnderecoCliente.SelectedItem;
-            pedido.Funcionario = (Funcionario)cbx_Funcionarios.SelectedItem;
-            pedido.Produtos = (Produtos)cbx_Produtos.SelectedItem;
+           
+                pedido.Cliente = (Clientes)cbx_clientes.SelectedItem;
+                pedido.Cliente = (Clientes)cbx_EnderecoCliente.SelectedItem;
+
+                pedido.Produtos = (Produtos)cbx_Produtos.SelectedItem;
+
             pedido.Observacao = txt_Observacao.Text;
-            
-            if (txt_Observacao.Text == null )
+
+            if (txt_Observacao.Text == string.Empty)
             {
-                pedido.Observacao  = "Nao informado";
+                pedido.Observacao = "Não Informada";
             }
-
-
-            var resultadoValidacao = GravarRegistro(pedido);
-
+             
+            var resultadoValidacao = GravarRegistro(Pedidos);
+           
             if (resultadoValidacao.IsValid == false)
             {
                 string erro = resultadoValidacao.Errors[0].ErrorMessage;
 
-                  TelaInicioForm.Instancia.AtualizarRodape(erro);
+                TelaInicioForm.Instancia.AtualizarRodape(erro);
 
                 DialogResult = DialogResult.None;
             }

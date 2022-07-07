@@ -29,7 +29,9 @@ namespace Delivery.WinApp1._2_Dominio.ModuloPedidos
                .NotNull();
 
             RuleFor(x => x.Observacao)
-               .Matches(new Regex(@"^([^0-9]*)$"));
+               .Matches(new Regex(@"^([^0-9]*)$"))
+               .NotEmpty();
+               
         }
     }
 }
