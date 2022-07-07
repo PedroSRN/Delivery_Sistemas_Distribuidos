@@ -98,11 +98,47 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloPedidos
 
         private void btn_Gravar_Click(object sender, EventArgs e)
         {
-           
+            if (cbx_clientes.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Insira o campo 'Cliente'.", "Cadastro de Pedidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else
+            {
                 pedido.Cliente = (Clientes)cbx_clientes.SelectedItem;
-                pedido.Cliente = (Clientes)cbx_EnderecoCliente.SelectedItem;
+            }
 
+            if (cbx_EnderecoCliente.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Insira o campo 'Endereço do Cliente'.", "Cadastro de Pedidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else
+            {
+                pedido.Cliente = (Clientes)cbx_EnderecoCliente.SelectedItem;
+            }
+
+            if (cbx_Produtos.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Insira o campo 'Produto'.", "Cadastro de Pedidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else
+            {
                 pedido.Produtos = (Produtos)cbx_Produtos.SelectedItem;
+            }
+
+            if (cbx_Funcionarios.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Insira o campo 'Produto'.", "Cadastro de Pedidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                return;
+            }
+            else
+            {
+                pedido.Funcionario = (Funcionario)cbx_Funcionarios.SelectedItem;
+            }
+
 
             pedido.Observacao = txt_Observacao.Text;
 
@@ -124,5 +160,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloPedidos
            
 
         }
+
+        
     }
 }

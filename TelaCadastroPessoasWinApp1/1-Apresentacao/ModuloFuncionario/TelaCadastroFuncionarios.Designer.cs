@@ -48,7 +48,7 @@
             // 
             this.lb_Nome.AutoSize = true;
             this.lb_Nome.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_Nome.Location = new System.Drawing.Point(107, 30);
+            this.lb_Nome.Location = new System.Drawing.Point(49, 14);
             this.lb_Nome.Name = "lb_Nome";
             this.lb_Nome.Size = new System.Drawing.Size(57, 21);
             this.lb_Nome.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             this.lb_Cargo.AutoSize = true;
             this.lb_Cargo.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_Cargo.Location = new System.Drawing.Point(106, 59);
+            this.lb_Cargo.Location = new System.Drawing.Point(48, 43);
             this.lb_Cargo.Name = "lb_Cargo";
             this.lb_Cargo.Size = new System.Drawing.Size(57, 21);
             this.lb_Cargo.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             this.lb_Cpf.AutoSize = true;
             this.lb_Cpf.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_Cpf.Location = new System.Drawing.Point(120, 86);
+            this.lb_Cpf.Location = new System.Drawing.Point(62, 70);
             this.lb_Cpf.Name = "lb_Cpf";
             this.lb_Cpf.Size = new System.Drawing.Size(43, 21);
             this.lb_Cpf.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             this.lb_Salario.AutoSize = true;
             this.lb_Salario.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_Salario.Location = new System.Drawing.Point(100, 115);
+            this.lb_Salario.Location = new System.Drawing.Point(42, 99);
             this.lb_Salario.Name = "lb_Salario";
             this.lb_Salario.Size = new System.Drawing.Size(66, 21);
             this.lb_Salario.TabIndex = 3;
@@ -88,11 +88,11 @@
             // 
             this.lb_DataNascimento.AutoSize = true;
             this.lb_DataNascimento.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_DataNascimento.Location = new System.Drawing.Point(2, 144);
+            this.lb_DataNascimento.Location = new System.Drawing.Point(7, 128);
             this.lb_DataNascimento.Name = "lb_DataNascimento";
-            this.lb_DataNascimento.Size = new System.Drawing.Size(164, 21);
+            this.lb_DataNascimento.Size = new System.Drawing.Size(99, 42);
             this.lb_DataNascimento.TabIndex = 4;
-            this.lb_DataNascimento.Text = "Data de Nascimento:";
+            this.lb_DataNascimento.Text = "Data de \r\nNascimento:";
             // 
             // btn_Gravar
             // 
@@ -100,7 +100,7 @@
             this.btn_Gravar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_Gravar.FlatAppearance.BorderSize = 10;
             this.btn_Gravar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Gravar.Location = new System.Drawing.Point(201, 9);
+            this.btn_Gravar.Location = new System.Drawing.Point(109, 9);
             this.btn_Gravar.Name = "btn_Gravar";
             this.btn_Gravar.Size = new System.Drawing.Size(90, 34);
             this.btn_Gravar.TabIndex = 9;
@@ -112,7 +112,7 @@
             // 
             this.btn_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Cancelar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Cancelar.Location = new System.Drawing.Point(294, 9);
+            this.btn_Cancelar.Location = new System.Drawing.Point(202, 9);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(90, 34);
             this.btn_Cancelar.TabIndex = 10;
@@ -121,17 +121,17 @@
             // 
             // txt_Nome
             // 
-            this.txt_Nome.Location = new System.Drawing.Point(170, 28);
+            this.txt_Nome.Location = new System.Drawing.Point(112, 12);
             this.txt_Nome.Name = "txt_Nome";
-            this.txt_Nome.Size = new System.Drawing.Size(185, 23);
+            this.txt_Nome.Size = new System.Drawing.Size(180, 23);
             this.txt_Nome.TabIndex = 11;
             // 
             // maskedTextBox_Cpf
             // 
-            this.maskedTextBox_Cpf.Location = new System.Drawing.Point(170, 84);
+            this.maskedTextBox_Cpf.Location = new System.Drawing.Point(112, 68);
             this.maskedTextBox_Cpf.Mask = "000,000,000-00";
             this.maskedTextBox_Cpf.Name = "maskedTextBox_Cpf";
-            this.maskedTextBox_Cpf.Size = new System.Drawing.Size(183, 23);
+            this.maskedTextBox_Cpf.Size = new System.Drawing.Size(180, 23);
             this.maskedTextBox_Cpf.TabIndex = 15;
             // 
             // panel1
@@ -139,32 +139,33 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.btn_Gravar);
             this.panel1.Controls.Add(this.btn_Cancelar);
-            this.panel1.Location = new System.Drawing.Point(-2, 207);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 207);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(402, 55);
+            this.panel1.Size = new System.Drawing.Size(306, 55);
             this.panel1.TabIndex = 16;
             // 
             // txt_cargo
             // 
-            this.txt_cargo.Location = new System.Drawing.Point(169, 57);
+            this.txt_cargo.Location = new System.Drawing.Point(112, 41);
             this.txt_cargo.Name = "txt_cargo";
-            this.txt_cargo.Size = new System.Drawing.Size(186, 23);
+            this.txt_cargo.Size = new System.Drawing.Size(180, 23);
             this.txt_cargo.TabIndex = 18;
             // 
             // dateTimePicker_Data_Nascimento
             // 
             this.dateTimePicker_Data_Nascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_Data_Nascimento.Location = new System.Drawing.Point(170, 144);
+            this.dateTimePicker_Data_Nascimento.Location = new System.Drawing.Point(111, 147);
             this.dateTimePicker_Data_Nascimento.Name = "dateTimePicker_Data_Nascimento";
             this.dateTimePicker_Data_Nascimento.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker_Data_Nascimento.Size = new System.Drawing.Size(185, 23);
+            this.dateTimePicker_Data_Nascimento.Size = new System.Drawing.Size(180, 23);
             this.dateTimePicker_Data_Nascimento.TabIndex = 19;
             // 
             // txt_salario
             // 
-            this.txt_salario.Location = new System.Drawing.Point(169, 115);
+            this.txt_salario.Location = new System.Drawing.Point(112, 97);
             this.txt_salario.Name = "txt_salario";
-            this.txt_salario.Size = new System.Drawing.Size(184, 23);
+            this.txt_salario.Size = new System.Drawing.Size(180, 23);
             this.txt_salario.TabIndex = 20;
             // 
             // TelaCadastroFuncionarios
@@ -172,7 +173,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(397, 262);
+            this.ClientSize = new System.Drawing.Size(306, 262);
             this.Controls.Add(this.txt_salario);
             this.Controls.Add(this.dateTimePicker_Data_Nascimento);
             this.Controls.Add(this.txt_cargo);

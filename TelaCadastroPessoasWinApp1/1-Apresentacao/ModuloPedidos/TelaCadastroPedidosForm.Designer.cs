@@ -48,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(104, 144);
+            this.label1.Location = new System.Drawing.Point(67, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 21);
             this.label1.TabIndex = 0;
@@ -58,17 +58,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(32, 32);
+            this.label2.Location = new System.Drawing.Point(54, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 21);
+            this.label2.Size = new System.Drawing.Size(74, 42);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Nome do Cliente:";
+            this.label2.Text = "Nome do\r\n Cliente:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(68, 187);
+            this.label4.Location = new System.Drawing.Point(31, 229);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 21);
             this.label4.TabIndex = 3;
@@ -78,9 +78,9 @@
             // 
             this.btn_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Cancelar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Cancelar.Location = new System.Drawing.Point(291, 3);
+            this.btn_Cancelar.Location = new System.Drawing.Point(225, 9);
             this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(94, 37);
+            this.btn_Cancelar.Size = new System.Drawing.Size(90, 34);
             this.btn_Cancelar.TabIndex = 11;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
@@ -89,9 +89,9 @@
             // 
             this.btn_Gravar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_Gravar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Gravar.Location = new System.Drawing.Point(191, 3);
+            this.btn_Gravar.Location = new System.Drawing.Point(125, 9);
             this.btn_Gravar.Name = "btn_Gravar";
-            this.btn_Gravar.Size = new System.Drawing.Size(94, 37);
+            this.btn_Gravar.Size = new System.Drawing.Size(90, 34);
             this.btn_Gravar.TabIndex = 10;
             this.btn_Gravar.Text = "Gravar";
             this.btn_Gravar.UseVisualStyleBackColor = true;
@@ -102,72 +102,73 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.btn_Cancelar);
             this.panel1.Controls.Add(this.btn_Gravar);
-            this.panel1.Location = new System.Drawing.Point(1, 248);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 282);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(398, 55);
+            this.panel1.Size = new System.Drawing.Size(334, 55);
             this.panel1.TabIndex = 18;
             // 
             // cbx_clientes
             // 
             this.cbx_clientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_clientes.FormattingEnabled = true;
-            this.cbx_clientes.Location = new System.Drawing.Point(174, 34);
+            this.cbx_clientes.Location = new System.Drawing.Point(135, 28);
             this.cbx_clientes.Name = "cbx_clientes";
-            this.cbx_clientes.Size = new System.Drawing.Size(187, 23);
+            this.cbx_clientes.Size = new System.Drawing.Size(180, 23);
             this.cbx_clientes.TabIndex = 19;
             // 
             // cbx_Produtos
             // 
             this.cbx_Produtos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_Produtos.FormattingEnabled = true;
-            this.cbx_Produtos.Location = new System.Drawing.Point(173, 146);
+            this.cbx_Produtos.Location = new System.Drawing.Point(135, 188);
             this.cbx_Produtos.Name = "cbx_Produtos";
-            this.cbx_Produtos.Size = new System.Drawing.Size(187, 23);
+            this.cbx_Produtos.Size = new System.Drawing.Size(180, 23);
             this.cbx_Produtos.TabIndex = 20;
             // 
             // cbx_Funcionarios
             // 
             this.cbx_Funcionarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_Funcionarios.FormattingEnabled = true;
-            this.cbx_Funcionarios.Location = new System.Drawing.Point(173, 103);
+            this.cbx_Funcionarios.Location = new System.Drawing.Point(135, 138);
             this.cbx_Funcionarios.Name = "cbx_Funcionarios";
-            this.cbx_Funcionarios.Size = new System.Drawing.Size(187, 23);
+            this.cbx_Funcionarios.Size = new System.Drawing.Size(180, 23);
             this.cbx_Funcionarios.TabIndex = 24;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(1, 103);
+            this.label5.Location = new System.Drawing.Point(31, 119);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(168, 21);
+            this.label5.Size = new System.Drawing.Size(97, 42);
             this.label5.TabIndex = 23;
-            this.label5.Text = "Nome do Funcionario:";
+            this.label5.Text = "Nome do \r\nFuncionario:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(7, 72);
+            this.label7.Location = new System.Drawing.Point(39, 62);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(161, 21);
+            this.label7.Size = new System.Drawing.Size(89, 42);
             this.label7.TabIndex = 32;
-            this.label7.Text = "Endereço do Cliente:";
+            this.label7.Text = "Endereço \r\ndo Cliente:";
             // 
             // cbx_EnderecoCliente
             // 
             this.cbx_EnderecoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_EnderecoCliente.FormattingEnabled = true;
-            this.cbx_EnderecoCliente.Location = new System.Drawing.Point(174, 70);
+            this.cbx_EnderecoCliente.Location = new System.Drawing.Point(135, 81);
             this.cbx_EnderecoCliente.Name = "cbx_EnderecoCliente";
-            this.cbx_EnderecoCliente.Size = new System.Drawing.Size(187, 23);
+            this.cbx_EnderecoCliente.Size = new System.Drawing.Size(180, 23);
             this.cbx_EnderecoCliente.TabIndex = 33;
             // 
             // txt_Observacao
             // 
-            this.txt_Observacao.Location = new System.Drawing.Point(173, 189);
+            this.txt_Observacao.Location = new System.Drawing.Point(136, 231);
             this.txt_Observacao.Name = "txt_Observacao";
-            this.txt_Observacao.Size = new System.Drawing.Size(188, 23);
+            this.txt_Observacao.Size = new System.Drawing.Size(180, 23);
             this.txt_Observacao.TabIndex = 34;
             // 
             // TelaCadastroPedidosForm
@@ -175,7 +176,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(397, 302);
+            this.ClientSize = new System.Drawing.Size(334, 337);
             this.Controls.Add(this.txt_Observacao);
             this.Controls.Add(this.cbx_EnderecoCliente);
             this.Controls.Add(this.label7);

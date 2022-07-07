@@ -46,7 +46,7 @@
             // 
             this.lb_nome.AutoSize = true;
             this.lb_nome.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_nome.Location = new System.Drawing.Point(56, 34);
+            this.lb_nome.Location = new System.Drawing.Point(40, 22);
             this.lb_nome.Name = "lb_nome";
             this.lb_nome.Size = new System.Drawing.Size(57, 21);
             this.lb_nome.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             this.lb_telefone.AutoSize = true;
             this.lb_telefone.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_telefone.Location = new System.Drawing.Point(34, 68);
+            this.lb_telefone.Location = new System.Drawing.Point(18, 56);
             this.lb_telefone.Name = "lb_telefone";
             this.lb_telefone.Size = new System.Drawing.Size(79, 21);
             this.lb_telefone.TabIndex = 1;
@@ -66,7 +66,7 @@
             // 
             this.lb_Cpf.AutoSize = true;
             this.lb_Cpf.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_Cpf.Location = new System.Drawing.Point(67, 109);
+            this.lb_Cpf.Location = new System.Drawing.Point(51, 97);
             this.lb_Cpf.Name = "lb_Cpf";
             this.lb_Cpf.Size = new System.Drawing.Size(43, 21);
             this.lb_Cpf.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             this.lb_Endereco.AutoSize = true;
             this.lb_Endereco.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_Endereco.Location = new System.Drawing.Point(31, 146);
+            this.lb_Endereco.Location = new System.Drawing.Point(15, 134);
             this.lb_Endereco.Name = "lb_Endereco";
             this.lb_Endereco.Size = new System.Drawing.Size(82, 21);
             this.lb_Endereco.TabIndex = 3;
@@ -84,25 +84,25 @@
             // 
             // txt_Nome
             // 
-            this.txt_Nome.Location = new System.Drawing.Point(116, 34);
+            this.txt_Nome.Location = new System.Drawing.Point(100, 22);
             this.txt_Nome.Name = "txt_Nome";
-            this.txt_Nome.Size = new System.Drawing.Size(194, 23);
+            this.txt_Nome.Size = new System.Drawing.Size(180, 23);
             this.txt_Nome.TabIndex = 4;
             // 
             // txt_Endereco
             // 
-            this.txt_Endereco.Location = new System.Drawing.Point(116, 144);
+            this.txt_Endereco.Location = new System.Drawing.Point(100, 132);
             this.txt_Endereco.Name = "txt_Endereco";
-            this.txt_Endereco.Size = new System.Drawing.Size(194, 23);
+            this.txt_Endereco.Size = new System.Drawing.Size(180, 23);
             this.txt_Endereco.TabIndex = 7;
             // 
             // btn_Gravar
             // 
             this.btn_Gravar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_Gravar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Gravar.Location = new System.Drawing.Point(191, 4);
+            this.btn_Gravar.Location = new System.Drawing.Point(91, 9);
             this.btn_Gravar.Name = "btn_Gravar";
-            this.btn_Gravar.Size = new System.Drawing.Size(94, 37);
+            this.btn_Gravar.Size = new System.Drawing.Size(90, 34);
             this.btn_Gravar.TabIndex = 8;
             this.btn_Gravar.Text = "Gravar";
             this.btn_Gravar.UseVisualStyleBackColor = true;
@@ -112,19 +112,19 @@
             // 
             this.btn_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Cancelar.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Cancelar.Location = new System.Drawing.Point(291, 4);
+            this.btn_Cancelar.Location = new System.Drawing.Point(191, 9);
             this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(94, 37);
+            this.btn_Cancelar.Size = new System.Drawing.Size(90, 34);
             this.btn_Cancelar.TabIndex = 9;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
             // 
             // maskedTextBox_Cpf
             // 
-            this.maskedTextBox_Cpf.Location = new System.Drawing.Point(118, 107);
+            this.maskedTextBox_Cpf.Location = new System.Drawing.Point(100, 95);
             this.maskedTextBox_Cpf.Mask = "000,000,000-99";
             this.maskedTextBox_Cpf.Name = "maskedTextBox_Cpf";
-            this.maskedTextBox_Cpf.Size = new System.Drawing.Size(192, 23);
+            this.maskedTextBox_Cpf.Size = new System.Drawing.Size(180, 23);
             this.maskedTextBox_Cpf.TabIndex = 11;
             this.maskedTextBox_Cpf.ValidatingType = typeof(System.DateTime);
             // 
@@ -133,17 +133,18 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.btn_Cancelar);
             this.panel1.Controls.Add(this.btn_Gravar);
-            this.panel1.Location = new System.Drawing.Point(0, 211);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 188);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(398, 55);
+            this.panel1.Size = new System.Drawing.Size(296, 55);
             this.panel1.TabIndex = 17;
             // 
             // masked_Telefone
             // 
-            this.masked_Telefone.Location = new System.Drawing.Point(116, 70);
+            this.masked_Telefone.Location = new System.Drawing.Point(100, 58);
             this.masked_Telefone.Mask = "0000-9999";
             this.masked_Telefone.Name = "masked_Telefone";
-            this.masked_Telefone.Size = new System.Drawing.Size(194, 23);
+            this.masked_Telefone.Size = new System.Drawing.Size(180, 23);
             this.masked_Telefone.TabIndex = 10;
             // 
             // TelaCadastroClienteForm
@@ -151,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(397, 262);
+            this.ClientSize = new System.Drawing.Size(296, 243);
             this.Controls.Add(this.masked_Telefone);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.maskedTextBox_Cpf);
