@@ -13,7 +13,7 @@ namespace Delivery.WinApp1._2_Dominio.ModuloFuncionario
         {
             Nome = nome;
             Cargo = cargo;
-            Cpf = cpf;
+            CPF = cpf;
             Salario = salario;
             DataNascimento = dataNascimento;
             
@@ -24,7 +24,7 @@ namespace Delivery.WinApp1._2_Dominio.ModuloFuncionario
         }
         public string Nome { get; set; }
         public string Cargo { get; set; }
-        public string Cpf { get; set; }
+        public string CPF { get; set; }
         public double Salario { get; set; }
         public DateTime DataNascimento { get; set; }
 
@@ -32,7 +32,7 @@ namespace Delivery.WinApp1._2_Dominio.ModuloFuncionario
         {
             Nome = funcionario.Nome;
             Cargo = funcionario.Cargo;
-            Cpf = funcionario.Cpf;
+            CPF = funcionario.CPF;
             Salario = funcionario.Salario;
             DataNascimento = funcionario.DataNascimento;
         }
@@ -43,14 +43,14 @@ namespace Delivery.WinApp1._2_Dominio.ModuloFuncionario
                    Id == funcionario.Id &&
                    Nome == funcionario.Nome &&
                    Cargo == funcionario.Cargo &&
-                   Cpf == funcionario.Cpf &&
+                   CPF == funcionario.CPF &&
                    Salario == funcionario.Salario &&
                    DataNascimento == funcionario.DataNascimento;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id, Nome, Cargo, Cpf, Salario, DataNascimento);
+            return HashCode.Combine(Id, Nome, Cargo, CPF, Salario, DataNascimento);
         }
 
         public override string ToString()

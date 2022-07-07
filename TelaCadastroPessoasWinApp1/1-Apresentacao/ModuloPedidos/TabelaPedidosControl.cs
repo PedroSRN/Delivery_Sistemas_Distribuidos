@@ -56,7 +56,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloPedidos
             
             foreach (Pedidos pedido in pedidos)
             {
-                grid.Rows.Add(pedido.Id, pedido.Cliente.Nome, pedido.Cliente.Endereco, pedido.Funcionario.Nome, pedido.Produtos.Nome, pedido.Observacao);
+                grid.Rows.Add(pedido.Id, pedido.Cliente.Nome.ToUpper(), pedido.Cliente.Endereco.ToUpper(), pedido.Funcionario.Nome.ToUpper(), pedido.Produtos.Nome.ToUpper(), pedido.Observacao.ToUpper());
                
             }
         }

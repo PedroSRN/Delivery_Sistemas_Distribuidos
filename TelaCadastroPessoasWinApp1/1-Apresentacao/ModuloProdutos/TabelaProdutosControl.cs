@@ -52,7 +52,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloProdutos
 
             foreach (Produtos produto in produtos)
             {
-                grid.Rows.Add(produto.Id, produto.Nome, produto.Preco, produto.Quantiade, produto.TipoDoProdutor);
+                grid.Rows.Add(produto.Id, produto.Nome.ToUpper(), produto.Preco, produto.Quantiade, produto.TipoDoProdutor.ToUpper());
             }
         }
     }

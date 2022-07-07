@@ -36,7 +36,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloFuncionario
                 
                 txt_Nome.Text = funcionario.Nome;
                 txt_cargo.Text = funcionario.Cargo;
-                maskedTextBox_Cpf.Text = funcionario.Cpf;
+                maskedTextBox_Cpf.Text = funcionario.CPF;
                 txt_salario.Text = funcionario.Salario.ToString();
 
                 if (funcionario.DataNascimento > DateTimePicker.MinimumDateTime)
@@ -52,7 +52,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloFuncionario
         {
             funcionario.Nome = txt_Nome.Text;
             funcionario.Cargo = txt_cargo.Text;
-            funcionario.Cpf = maskedTextBox_Cpf.Text;
+            funcionario.CPF = maskedTextBox_Cpf.Text;
             funcionario.Salario = Convert.ToDouble(txt_salario.Text.Replace("R$", string.Empty).Replace(",", CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator));
             funcionario.DataNascimento = dateTimePicker_Data_Nascimento.Value;
 

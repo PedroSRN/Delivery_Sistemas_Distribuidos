@@ -22,7 +22,7 @@ namespace Delivery.WinApp1._2_Dominio.ModuloFuncionario
               .NotEmpty()
               .MinimumLength(3);
 
-            RuleFor(x => x.Cpf)
+            RuleFor(x => x.CPF)
               .NotEmpty()
               .Matches(new Regex(@"[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}"));
 

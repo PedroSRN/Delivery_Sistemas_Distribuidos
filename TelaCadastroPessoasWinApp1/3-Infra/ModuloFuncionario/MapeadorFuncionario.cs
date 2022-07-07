@@ -16,7 +16,7 @@ namespace Delivery.WinApp1._3_Infra.ModuloFuncionario
             comando.Parameters.AddWithValue("ID", funcionario.Id);
             comando.Parameters.AddWithValue("NOME", funcionario.Nome);
             comando.Parameters.AddWithValue("CARGO", funcionario.Cargo);
-            comando.Parameters.AddWithValue("CPF", funcionario.Cpf);
+            comando.Parameters.AddWithValue("CPF", funcionario.CPF);
             comando.Parameters.AddWithValue("SALARIO", funcionario.Salario);
             comando.Parameters.AddWithValue("DATANASCIMENTO", funcionario.DataNascimento);
         }
@@ -34,7 +34,7 @@ namespace Delivery.WinApp1._3_Infra.ModuloFuncionario
             funcionario.Id = id;
             funcionario.Nome = nome;
             funcionario.Cargo = cargo;
-            funcionario.Cpf = cpf;
+            funcionario.CPF = cpf;
             funcionario.Salario = salario;
             funcionario.DataNascimento = dataNascimento;
 

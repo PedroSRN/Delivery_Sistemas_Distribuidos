@@ -54,7 +54,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloFuncionario
 
             foreach(Funcionario funcionario in funcionarios)
             {
-                grid.Rows.Add(funcionario.Id, funcionario.Nome, funcionario.Cargo, funcionario.Cpf, funcionario.Salario, funcionario.DataNascimento);
+                grid.Rows.Add(funcionario.Id, funcionario.Nome.ToUpper(), funcionario.Cargo.ToUpper(), funcionario.CPF, funcionario.Salario, funcionario.DataNascimento.ToString("dd/MM/yyyy"));
             }
         }
     }

@@ -51,7 +51,7 @@ namespace Delivery.WinApp1._1_Apresentacao.ModuloClientes
 
             foreach (Clientes cliente in clientes)
             {
-                grid.Rows.Add(cliente.Id, cliente.Nome, cliente.Telefone, cliente.CPF, cliente.Endereco);
+                grid.Rows.Add(cliente.Id, cliente.Nome.ToUpper(), cliente.Telefone, cliente.CPF, cliente.Endereco.ToUpper());
             }
         }
 
